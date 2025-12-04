@@ -1,0 +1,5 @@
+{
+  "name": "NeuroTerm: AI Console",
+  "description": "A retro-styled terminal interface hosting AI-powered guessing games like AI Riddles and Number Guessing.",
+  "requestFramePermissions": []
+}
