@@ -41,7 +41,9 @@ export const generateRiddle = async (): Promise<RiddleData> => {
       throw new Error("No response from AI");
     }
 
-    return JSON.parse(text) as RiddleData;
+    // Clean up potential markdown formatting before parsing
+    const cleanText = text.replace(/```json\n?|```/g, '').trim();
+    return JSON.parse(cleanText) as RiddleData;
 
   } catch (error) {
     console.error("Gemini API Error:", error);
